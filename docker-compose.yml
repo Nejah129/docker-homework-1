@@ -1,0 +1,12 @@
+version: '3'
+services:
+  my-express-work:
+    image: node:latest
+    container_name: my-express-work-container
+    build:
+      dockerfile: Dockerfile
+    ports:
+    - "1111:5000"
+
+
+    
