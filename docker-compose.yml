@@ -1,4 +1,4 @@
-version: '3'
+version: '3.9'
 services:
   my-express-work:
     image: node:latest
@@ -7,6 +7,22 @@ services:
       dockerfile: Dockerfile
     ports:
     - "1111:5000"
+    networks:
+        - docker-workshop-network
+  my-mongo-work:
+    image: mongo:latest
+    container_name: my-mongo-container
+    ports:
+      - "27019:27017"
+    networks:
+      - docker-workshop-network
+    volumes:
+      - my-mongodb-volume:/data/db
 
+networks:
+  docker-workshop-network:  
+    driver: bridge
 
+volumes:
+  my-mongodb-volume:
     
