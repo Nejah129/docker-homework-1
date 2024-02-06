@@ -44,10 +44,10 @@ app.use(express.json());
 //     let responseText = 'Hello World!<br>'
 //     responseText += `<small>Requested at: ${req.requestTime}</small>`
 //     res.send(responseText)
-//   })
+//   });
 
 mongoose
-  .connect("mongodb://my-mongo-work:27017/my-db", {
+  .connect("mongodb+srv://Nejah129:0000@cluster0.myzdx.mongodb.net/test?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })

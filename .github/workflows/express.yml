@@ -7,8 +7,12 @@ on:
         branches: [ "main" ]
     
 jobs:
-  My-First-test-on-github-actions:
-    runs-on: ubuntu-latest
-    steps:
-      - name: clone my project on Github Actions
-        uses: actions/checkout@v3
+    Install-dependencies:
+        runs-on: ubuntu-latest
+        steps:
+            - name: clone my project on Github Actions
+              uses: actions/checkout@v3
+            - name: Install dependencies
+              run: npm install
+            - name: Start Project
+              run: npm start
