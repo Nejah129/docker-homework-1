@@ -13,7 +13,7 @@ jobs:
             - name: clone my project on Github Actions Name ^_^
               uses: actions/checkout@v3
             - name: Install-dependencies Name ^_^
-              run: npm install
+              run:  npm install
 
   Success-Mession:
       runs-on: ubuntu-latest
