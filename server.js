@@ -44,7 +44,7 @@ app.use(express.json());
 //     let responseText = 'Hello World!<br>'
 //     responseText += `<small>Requested at: ${req.requestTime}</small>`
 //     res.send(responseText)
-//   })
+//   });
 
 mongoose
   .connect("mongodb://my-mongo-work:27017/my-db", {
