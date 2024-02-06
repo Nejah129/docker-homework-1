@@ -12,6 +12,10 @@ jobs:
         steps:
             - name: clone my project on Github Actions Name ^_^
               uses: actions/checkout@v3
+            - name: Use Node.js 20.x
+              uses: actions/setup-node@v2
+              with:
+                node-version: '20.x'
          
   Install-dependencies:
     runs-on: ubuntu-latest
