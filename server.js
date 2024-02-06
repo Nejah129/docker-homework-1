@@ -47,7 +47,7 @@ app.use(express.json());
 //   });
 
 mongoose
-  .connect("mongodb://my-mongo-work:27017/my-db", {
+  .connect("mongodb+srv://Nejah129:0000@cluster0.myzdx.mongodb.net/test?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
