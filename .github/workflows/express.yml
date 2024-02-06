@@ -7,12 +7,21 @@ on:
         branches: [ "main" ]
     
 jobs:
-    Install-dependencies:
+  clone-my-project-on-github-Actions:
         runs-on: ubuntu-latest
         steps:
-            - name: clone my project on Github Actions
+            - name: clone my project on Github Actions Name ^_^
               uses: actions/checkout@v3
-            - name: Install dependencies
-              run: npm install
-            - name: Start Project
-              run: npm start
+         
+  Install-dependencies:
+    runs-on: ubuntu-latest
+    needs: [clone-my-project-on-github-Actions]
+    steps:
+        - name: Install-dependencies Name ^_^
+          run: npm install
+  Sucess-Mession:
+      runs-on: ubuntu-latest
+      needs: [clone-my-project-on-github-Actions,Install-dependencies]
+      steps:
+          - name: Sucess Habibi Name ^_^
+            run: echo Success
